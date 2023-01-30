@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
 <body onload="alert('By using this website you consent to upload and forfeit all of your personal information to Pollo Value Sales, Co.');">
-<h1>Welcome to the Pollo Value Sales website! Fuck chicken!</h1>
-
+<title>Welcome to the Pollo Value Sales website! Fuck chicken!</title>
 <img src="https://avatars.githubusercontent.com/u/123975116?v=4"><br>
 
-<h2>Check my Pollo Points</h2>
+<script>
+	function Points(name) {
+		return 1;
+	}
+</script>
+
+<h1>Check my Pollo Points</h1>
 
 <form action="/action_page.php">
 <label for="name">Name:</label><br>
 <input type="text" id="name" name="name" value=""><br>
 
 <button type="button"
-onclick="document.getElementById('PointsText').innerHTML = Points()">
+onclick="document.getElementById('PointsText').innerHTML = Points(name)">
 Check</button>
 
 <p id="PointsText"></p>
