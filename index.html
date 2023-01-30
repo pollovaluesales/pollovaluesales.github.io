@@ -5,8 +5,14 @@
 <img src="https://avatars.githubusercontent.com/u/123975116?v=4"><br>
 
 <script>
-	function Points(name) {
-		return name;
+	function Points() {
+		var namestring = document.getElementById("name").value;
+		var result = 0;
+
+		for (let i = 0; i < namestring.length; i++) {
+			result += namestring[i].charCodeAt(0);
+		}
+		return Math.trunc(result*0.1*namestring[0].charCodeAt(0)+5000).toLocaleString("en-US");
 	}
 </script>
 
@@ -16,11 +22,10 @@
 <label for="name">Name:</label><br>
 <input type="text" id="name" name="name" value=""><br>
 
-<button type="button"
-onclick="document.getElementById('PointsText').innerHTML = Points(name)">
+<button type="button" onclick="document.getElementById('PointsText').innerHTML = Points()">
 Check</button>
 
-<p id="PointsText"></p>
+<h2 id="PointsText"></h2>
 
 </form>
 </body>
