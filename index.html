@@ -13,7 +13,8 @@
 		for (let i = 0; i < namestring.length; i++) {
 			result += namestring[i].charCodeAt(0);
 		}
-		return Math.trunc(result*0.1*namestring[0].charCodeAt(0)+5000).toLocaleString("en-US");
+	    result = Math.trunc(Math.pow(result*0.002*namestring[0].charCodeAt(0),2.2));
+		return result.toLocaleString("en-US");
 	}
 </script>
 
